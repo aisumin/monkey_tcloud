@@ -205,7 +205,7 @@ class TCloud(object):
             logger.info(request_data)
 
             request_url = '{}/v1/monkey/{}'.format(self.tcloud_url, self.monkey_id)
-
+            logger.info(request_url)
             response = requests.request(method='POST', url=request_url, json=request_data)
 
             if response.ok:
